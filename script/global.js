@@ -45,4 +45,14 @@ $(function () {
 	
 
 
+	$("#mdm li").click(function () {
+		var that = $(this);
+		if (that.hasClass('active')) {
+
+		}else{
+			$("#mdm li").removeClass('active');
+			that.addClass('active');
+		}
+	})
+
 });

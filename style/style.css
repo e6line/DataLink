@@ -1021,3 +1021,157 @@ div.meneame span.disabled {
 	.resultBtn{
 		padding: 30px 0;
 	}
+
+/* myDataWrap */
+#myDataWrap{
+	border: 1px solid #ccc;
+	background:#fff url("../images/myDateMenuBg.gif") repeat-y;
+}
+	#myDataMenu{
+		margin-left: -1px;
+		margin-top: -1px;
+		width: 224px;
+	}
+		#myDataMenu h1{
+			height: 50px;
+			line-height: 50px;
+			font-size: 18px;
+			font-weight: normal;
+			color: #fff;
+			padding-left: 30px;
+			background: url("../images/htBg.gif");
+			border-bottom: 1px solid #ccc;
+		}
+			#myDataMenu h1 span{
+				height: 50px;
+				padding-left: 30px;
+				background: url("../images/menuIcon.gif") left center no-repeat;
+			}
+		#myDataMenu ul{}
+		#myDataMenu ul li{
+			position: relative;
+		}
+		#myDataMenu ul li a{
+			font-size: 16px;
+			height: 50px;
+			line-height: 50px;
+			display: block;
+			margin: 0 1px;
+			padding-left: 60px;
+		}
+		#myDataMenu ul li.active{
+		}
+		#myDataMenu ul li.active span{
+			display: block;
+		}
+		#myDataMenu ul li.active>a{
+			background-color: #03c5ff!important;
+			color: #fff;
+		}
+		#myDataMenu ul li span{
+			display: none;
+		}
+		#myDataMenu ul li span a{
+			font-size: 14px;
+		}
+		#myDataMenu ul li a:hover{
+			padding-left: 70px;
+			/*background-color: rgba(255,255,255,.8)!important;*/
+			background-position:  40px center!important;
+		}
+		#myDataMenu ul li a.i1{
+			background: url("../images/i1.gif") 30px center no-repeat;
+		}
+		#myDataMenu ul li a.i2{
+			background: url("../images/i2.gif") 30px center no-repeat;
+		}
+		#myDataMenu ul li a.i3{
+			background: url("../images/i3.gif") 30px center no-repeat;
+		}
+		#myDataMenu ul li a.i4{
+			background: url("../images/i4.gif") 30px center no-repeat;
+		}
+		#myDataMenu ul li a.i5{
+			background: url("../images/i5.gif") 30px center no-repeat;
+		}
+		#myDataMenu ul li.active a.i1{
+			background: url("../images/i1X.png") 30px center no-repeat;
+		}
+		#myDataMenu ul li.active a.i2{
+			background: url("../images/i2X.png") 30px center no-repeat;
+		}
+		#myDataMenu ul li.active a.i3{
+			background: url("../images/i3X.png") 30px center no-repeat;
+		}
+		#myDataMenu ul li.active a.i4{
+			background: url("../images/i4X.png") 30px center no-repeat;
+		}
+		#myDataMenu ul li.active a.i5{
+			background: url("../images/i5X.png") 30px center no-repeat;
+		}
+		.dmenu i{
+			position: absolute;
+			width: 12px;
+			height: 10px;
+			line-height: 10px;
+			top: 20px;
+			left: 190px;
+			background: url("../images/dmenu.gif") no-repeat;
+		}
+		.active i{
+			background: url("../images/dmenuX.png") no-repeat;
+		}
+
+#myDataBox{
+	width: 870px;
+	padding: 50px;
+}
+	#myDataBox h1{
+		height: 50px;
+		line-height: 50px;
+		font-size: 25px;
+		font-weight: normal;
+		border-bottom: 1px solid #ccc;
+	}
+	.mdbWrap{
+		padding: 40px 0;
+		border-bottom: 1px solid #ccc;
+	}
+	.mdbWrap2{
+		padding: 40px 0;
+		position: relative;
+	}
+	.mdbWrap2 .btn{
+		position: absolute;
+		top: 70px;
+		right: 0;
+		width: 120px;
+	}
+	.mdb{
+		display: inline-block;
+		padding-left: 120px;
+		min-height: 82px;
+	}
+	.mdb h3{
+		font-size: 16px;
+		line-height: 30px;
+		font-weight: normal;
+	}
+	.mdb p{
+		display: inline-block;
+		font-size: 14px;
+		line-height: 26px;
+		width: 280px;
+	}
+	.c1{
+		background: url("../images/c1.gif") 20px center no-repeat;
+	}
+	.c2{
+		background: url("../images/c2.gif") 20px center no-repeat;
+	}
+	.c3{
+		background: url("../images/c3.gif") 20px center no-repeat;
+	}
+	.w300{
+		width: 300px;
+	}
