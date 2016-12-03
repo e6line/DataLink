@@ -53,6 +53,8 @@ $(function () {
 			$("#mdm li").removeClass('active');
 			that.addClass('active');
 		}
-	})
+	});
+
+	$("#mdm li").eq(setMenu).click();
 
 });
