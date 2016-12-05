@@ -367,37 +367,37 @@ jQuery.validator.addMethod("validDigit", function(value, element){
 //不能出现空格
 jQuery.validator.addMethod("validNoSpace", function(value, element){
 	var b =  this.optional(element) || $.isNoSpace(value);
-    return b;
+	return b;
 },"不能出现空格");
 
 //专业名称
 jQuery.validator.addMethod("validSpecialty", function(value, element){
 	var b =  this.optional(element) || $.isSpecialty(value);
-    return b;
+	return b;
 },"专业名称有误！请您核对");
 
 //公司名称
 jQuery.validator.addMethod("validCompanyName", function(value, element){
 	var b =  this.optional(element) || $.isCompanyName(value);
-    return b;
+	return b;
 },"公司名称有误！请您核对");
 
 //公司地址
 jQuery.validator.addMethod("validAddress", function(value, element){
 	var b =  this.optional(element) || $.isAddress(value);
-    return b;
+	return b;
 },"公司名称有误！请您核对");
 
 //检测Email
 jQuery.validator.addMethod("validEmail", function(value, element){
 	var b =  this.optional(element) || $.isEmail(value);
-    return b;
+	return b;
 },"身份证号码有误！请您核对");
 
 //检测15-18位身份证号
 jQuery.validator.addMethod("validId", function(value, element){
 	var b =  this.optional(element) || $.isIdCard(value);
-    return b;
+	return b;
 },"身份证号码有误！请您核对");
 
 //检测中文长度范围
@@ -406,25 +406,25 @@ jQuery.validator.addMethod("cn_rangelength",function(value,element,params){var v
 //检测-实例化密码规则
 jQuery.validator.addMethod("validPassword", function(value, element){
 	var b =  this.optional(element) || $.isPw(value);
-    return b;
+	return b;
 },"密码有误！请您核对");
 
 //检测-实例化登录密码规则
 jQuery.validator.addMethod("validLoginPassword", function(value, element){
 	var b =  this.optional(element) || $.isLoginPw(value);
-    return b;
+	return b;
 },"密码有误！请您核对");
 
 //检测-实例化中文姓名
 jQuery.validator.addMethod("validCName", function(value, element){
 	var b =  this.optional(element) || $.isCName(value);
-    return b;
+	return b;
 },"输入内容必须为汉字");
 
 //检测-实例化手机规则
 jQuery.validator.addMethod("validMobile", function(value, element){
 	var b =  this.optional(element) || $.isMob(value);
-    return b;
+	return b;
 },"密码有误！请您核对");
 
 //检测-实例化新旧密码不能相同
@@ -436,7 +436,7 @@ jQuery.validator.addMethod("validUnequalTo", function(value, element, id){
 		c = true;
 	}
 	var b =  this.optional(element) || c
-    return b;
+	return b;
 },"新旧密码不能相同");
 
 
@@ -470,7 +470,7 @@ jQuery.validator.addMethod("validJsonPMob", function(value, element){
 		}
 	}
 	
-    return this.optional(element) || temp;
+	return this.optional(element) || temp;
 	
 },"验证码有误");
 
@@ -510,7 +510,7 @@ jQuery.validator.addMethod("validJsonPMob2", function(value, element){
 		}
 	}
 	
-    return this.optional(element) || temp;
+	return this.optional(element) || temp;
 	
 },"验证码有误");
 
@@ -544,7 +544,7 @@ jQuery.validator.addMethod("validJsonPMail", function(value, element){
 		}
 	}
 	
-    return this.optional(element) || temp;
+	return this.optional(element) || temp;
 	
 },"验证码有误");
 
@@ -583,7 +583,7 @@ jQuery.validator.addMethod("validJsonPMail2", function(value, element){
 		}
 	}
 	
-    return this.optional(element) || temp;
+	return this.optional(element) || temp;
 	
 },"验证码有误");
 
@@ -659,7 +659,7 @@ jQuery.validator.addMethod("validSchool", function(value, element){
 		temp =  true;
 	}
 	
-    return temp;
+	return temp;
 	
 },"学校、专业至少填写一项");
 
@@ -738,11 +738,11 @@ jQuery.validator.addMethod("validBankNo1",function(value,element){
 },"银行卡号必须全由数字组成");
 jQuery.validator.addMethod("validBankNo2",function(value, element){
 	var b =  this.optional(element) || $.BankNo16To19(value);
-    return b;
+	return b;
 },"请填写16到19位的银行卡号");
 jQuery.validator.addMethod("validBankNo3",function(value, element){
 	var b =  this.optional(element) || $.isBankNo(value);
-    return b;
+	return b;
 },"银行卡号不符合规则");
 /* \OVER 纪成业 2015-6-17 （添加）*/
 
@@ -825,6 +825,18 @@ $(document).ready(function(){
 		return false;
 	});
 
+
+	$("#fileUpload").change(function(){
+		var filePath = $(this).val();
+		if(filePath.indexOf("jpg")!=-1 || filePath.indexOf("png")!=-1){
+			var arr=filePath.split('\\');
+			var fileName=arr[arr.length-1];
+			$("#path").html(fileName);
+		}else{
+			$("#path").html("只可以上传'jpg','png'格式文件，且不能大于3M");
+			return false 
+		}
+	})
 	
 	jQuery.validator.setDefaults({
 		debug: false
@@ -891,4 +903,37 @@ $(document).ready(function(){
 		}
 	});
 
+
+	/* 企业认证 */
+	$("#qyrz").validate({
+		rules:{
+			gs_name: {required:true}
+			,qyzh: {required:true}
+			,email:{required:true,validEmail:true}
+			,check_agree: {required:true}
+		}
+		,messages:{
+			gs_name: {required:"此为必填项，请填写完善"}
+			,qyzh: {required:"此为必填项，请填写完善"}
+			,email:{required:"此为必填项，请填写完善",validEmail:"请检查您的邮箱格式"}
+			,check_agree: {required:"请同意服务条款"}
+		}
+	});
+
+
+	/* 失信查询 */
+	$("#sxForm").validate({
+		rules:{
+			real_name:{required:true,cn_rangelength:[2,50],validCName:true}
+			,identity_card:{required:true,validId:true}
+			,user_mob:{validMobile:true}
+			,user_email:{validEmail:true}
+		}
+		,messages:{
+			real_name:{required:"此为必填项，请填写完善",cn_rangelength:jQuery.format("请输入姓名长度{0} 和 {1} 位的中文"),validCName:"输入内容必须为汉字"}
+			,identity_card:{required:"此为必填项，请填写完善",validId:"身份证格式不对"}
+			,user_mob:{validMobile:"输入的手机号错误，请核实后重新填写"}
+			,user_email:{validEmail:"请检查您的邮箱格式"}
+		}
+	});
 });
