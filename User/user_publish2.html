@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>发布数据 数联平台</title>
+
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="boxed-view">
+
+<section>
+    <div class="container">
+        <!-- left side start-->
+        <div class="left-side">
+
+            <!--logo and iconic logo start-->
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+          <div class="logo-icon text-center">
+                <a href="index.html"><img src="images/logo_icon.png" alt=""></a>
+            </div>
+            <!--logo and iconic logo end-->
+
+            <div class="left-side-inner">
+
+                <!-- visible to small devices only -->
+                <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                    <div class="media logged-user">
+                        <img alt="" src="images/photos/user-avatar.png" class="media-object">
+                        <div class="media-body">
+                            <h4><a href="#">John Doe</a></h4>
+                            <span>"Hello There..."</span>
+                        </div>
+                    </div>
+
+                    <h5 class="left-nav-title">Account Information</h5>
+                    <ul class="nav nav-pills nav-stacked custom-nav">
+                        <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                    </ul>
+                </div>
+
+                <!--sidebar nav start-->
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                    <li><a href=""><i class="fa fa-laptop"></i> <span>基本信息与权限设置</span></a></li>
+                    <li class="active"><a href=""><i class="fa fa-book"></i> <span>网络接口与参数设置</span></a></li>
+                    <li><a href=""><i class="fa fa-cogs"></i> <span>计费方式设置</span></a></li>
+                </ul>
+                <!--sidebar nav end-->
+
+            </div>
+            
+            <div class="logo">
+                <a href="user_1datasource1_published.html">
+                <button class="btn btn-info" type="button">　　　返回我的数联　　　</button>
+            　　</a>
+            </div>
+            
+      </div>
+        <!-- left side end-->
+
+        <!-- main content start-->
+        <div class="main-content" >
+
+            <!-- header section start-->
+            <div class="header-section">
+
+            <!--toggle button start-->
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <!--toggle button end-->
+
+            <!--notification menu start -->
+            <div class="menu-right">
+                <ul class="notification-menu">
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge">1</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">系统通知</h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">数据审核通知    </span>
+                                        <em class="small">&nbsp;&nbsp;6 小时前</em>
+                                    </a>
+                                </li>
+                                <li class="new"><a href="">阅读所有通知</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="images/photos/user-avatar.png" alt="" />
+                            13856985465
+                        <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li><a href="#"><i class="fa fa-sign-out"></i>退出</a></li>
+                        </ul>
+                    </li>
+              </ul>
+            </div>
+            <!--notification menu end -->
+            
+            </div>
+            <!-- header section end-->
+
+            <!-- page heading start-->
+            <div class="page-heading">
+          		<h1>　发布数据</h1>
+            </div>
+            <!-- page heading end-->
+
+            <!--body wrapper start-->
+            <div class="wrapper">
+                <section class="panel">
+                    <header class="panel-heading"> 发布数据（网络 / 接口与参数设置） </header>
+                    <div class="panel-body">
+                        <form class="form-horizontal adminex-form" method="get">
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label"></br></br></br>本站访问地址：</label>
+                                <div class="col-sm-10">
+                                    <span class="help-block">数据包是，为实现某些特定调用服务，而整合在一起的相互关联的，或者共同作用的数据产品集合。如数据接口完全独立，不从属于任何数据包，此项可不填。</span></br>
+                                    <input type="text" class="form-control tooltips" data-trigger="hover" data-toggle="tooltip" title="" placeholder="http://api.51datalink.com/88888888/ 点击此处添加接口名称" data-original-title="Tooltip goes here">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">目标访问地址：</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control tooltips" placeholder="输入数据源服务地址">
+                                    <font color="#737373">相关提示信息位置，提示内容位置</font>
+                                </div>    
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">HTTP方法：</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control m-bot15">
+                                        <option>GET</option>
+                                        <option>POST</option>
+                                    </select>
+                                </div>
+                            </div>
+                   　　 </form>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="wrapper">
+                <section class="panel">
+                    <header class="panel-heading">
+                        发布数据（接口所属数据包设置）
+                    </header>
+                    <div class="panel-body">
+                        <form class="form-horizontal adminex-form" method="get">
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label"></br></br></br>数据包标签名：</label>
+                                <div class="col-sm-10">
+                                    <span class="help-block">数据包是，为实现某些特定调用服务，而整合在一起的相互关联的，或者共同作用的数据产品集合。如数据接口完全独立，不从属于任何数据包，此项可不填。</span></br>
+                                    <input type="text" class="form-control tooltips" data-trigger="hover" data-toggle="tooltip" title="" placeholder="Hover me" data-original-title="Tooltip goes here">
+                                </div>
+                            </div>
+                   　　 </form>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="wrapper">            
+              <section class="panel">
+                    <header class="panel-heading"> 发布数据（展示位与用户授权设置） </header>
+                    <div class="panel-body">
+                        <div class="row">
+                            
+                            <div class="col-md-6">
+                                <form class="form-horizontal bucket-form" method="get">
+                                    <div class="form-group">
+                                      <label class="col-sm-3 control-label">展示位</label>
+                                      <div class="col-sm-9 icheck minimal">
+                                            <div class="radio single-row">
+                                                <input tabindex="3" type="radio"  name="demo-radio">
+                                                <label>设置在所有页面展示</label>
+                                          </div>
+
+                                            <div class="radio single-row">
+                                                <input tabindex="3" type="radio"  name="demo-radio">
+                                                <label>产品在搜索结果中不可见</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <form class="form-horizontal bucket-form" method="get">
+                                    <div class="form-group">
+                                      <label class="col-sm-3 control-label">用户授权</label>
+                                      <div class="col-sm-9 icheck minimal">
+                                            <div class="radio single-row">
+                                                <input tabindex="3" type="radio"  name="demo-radio">
+                                                <label>仅允许企业用户调用</label>
+                                            </div>
+
+                                            <div class="radio single-row">
+                                                <input tabindex="3" type="radio"  name="demo-radio">
+                                                <label>允许实名注册用户调用</label>
+                                            </div>
+
+                                            <div class="radio checked single-row">
+                                                <input tabindex="3" type="radio"  name="demo-radio">
+                                                <label>允许所有注册用户调用</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>                            
+                            
+                        </div>
+                    </div>
+                </section>            
+            </div>            
+            
+            
+          <div class="wrapper">
+               <button class="btn btn-primary" type="button">保存</button>
+          </div>
+            
+            <!--body wrapper end-->
+
+            <!--footer section start-->
+            <footer class="">
+                Footer contents goes here
+            </footer>
+            <!--footer section end-->
+
+        </div>
+        <!-- main content end-->
+    </div>
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+<!--common scripts for all pages-->
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
