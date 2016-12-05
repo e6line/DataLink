@@ -830,21 +830,65 @@ $(document).ready(function(){
 		debug: false
 		,errorClass: "error"
 		,validClass: "right"
-		,errorPlacement: function(error, element){
-			var $parent = element.parent().parent(); 
-			var error_div = $parent.find(".loginTip");
-			var icon = $parent.find(".loginIcon");
-			element.addClass("error");
-			error_div.html(error);
-			error.addClass("error");
-			//icon.removeClass("righticon").show();
+	});
+
+
+	/*登录*/
+	$("#loginForm").validate({
+		rules:{
+			username:{required:true,validMobile:true}
+			,password:{required:true}
+			,img_cord:{required:true,remote: {
+				url: domain+"/checkverifyCode.html",
+				type: "post",
+				async:　false,
+				data:{
+					img_cord:function(){
+						return $("#img_cord").val();
+					}
+				} 
+				}
+			}
+			,check_agree: {required:true}
 		}
-		,success: function(label){
-			label.text(label.parent().attr("data-text"));
-			label.removeClass("error");
-			//label.parent().siblings(".loginIcon").addClass("righticon");
+		,messages:{
+			username:{required:"此为必填项，请填写完善",validMobile:"输入的手机号错误，请核实后重新填写"}
+			,password:{required:"此项为必填项，不能为空"}
+			,img_cord:{required:"验证码不能为空",remote:"您输入的验证码有误"}
+			,check_agree: {required:"请同意服务条款"}
 		}
 	});
 
+
+
+	/*注册*/
+	$("#reg").validate({
+		rules:{
+			user_mob:{required:true,validMobile:true}
+			,img_cord:{required:true,remote: {
+					url: domain+"/checkverifyCode.html",
+					type: "post",
+					async:　false,
+					data:{
+						img_cord:function(){
+							return $("#img_cord").val();
+						}
+					} 
+				}
+			}
+			,mob_cord:{required:true,validJsonPMob2:true}
+			,user_pwd:{required:true,cn_rangelength:[6,32],validPassword:true}
+			,re_pwd:{required:true,cn_rangelength:[6,32],equalTo: "#user_pwd"}
+			,check_agree: {required:true}
+		}
+		,messages:{
+			user_mob:{required:"此为必填项，请填写完善",validMobile:"输入的手机号错误，请核实后重新填写"}
+			,img_cord:{required:"验证码不能为空",remote:"您输入的验证码有误"}
+			,mob_cord:{required:"此为必填项，请填写完善",validJsonPMob2:"短信验证码有误，请核实后重新填写"}
+			,user_pwd:{required:"此为必填项，请填写完善",cn_rangelength:jQuery.format("请输入密码长度{0} 和 {1} 位的字符串"),validPassword:"必须由字母和数字组成"}
+			,re_pwd:{required:"此为必填项，请填写完善",cn_rangelength:"请输入密码长度{0} 和 {1} 位的字符串",equalTo:"2次输入密码不一致"}
+			,check_agree: {required:"请同意服务条款"}
+		}
+	});
 
 });

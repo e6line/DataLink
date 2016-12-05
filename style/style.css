@@ -1175,3 +1175,37 @@ div.meneame span.disabled {
 	.w300{
 		width: 300px;
 	}
+
+/* validata */
+.inputWrap, .checkboxWrap{
+	position: relative;
+}
+label.error{
+	position: absolute;
+	white-space:nowrap;
+	color: red;
+	padding: 5px;
+	background:#ffe8c6;
+	border: 1px solid #ff6757;
+	z-index: -1px;
+}
+label.error:after{
+	position: absolute;
+	width: 6px;
+	content: '';
+	height: 10px;
+	top: 8px;
+	left: -5px;
+	line-height: 0px;
+	z-index: 9;
+	background: url("../images/errorBg.gif") no-repeat;
+}
+.inputWrap label.error{
+	top: 10px;
+	left: 100%;
+	padding: 5px;
+}
+.checkboxWrap label.error{
+	top: -5px;
+	left: 100%;
+}
