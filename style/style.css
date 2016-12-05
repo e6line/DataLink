@@ -465,6 +465,9 @@ label input{
 				width: 47%;
 				margin-right: 0;
 			}
+			.btnWrap span.s1 .btn, .btnWrap span.s2 .btn, .btnWrap span.s3 .btn, .btnWrap span.s4 .btn, .btnWrap span.s5 .btn{
+				width: auto;
+			}
 
 /* dataList */
 .mainBg{
