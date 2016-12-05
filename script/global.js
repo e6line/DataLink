@@ -9,7 +9,7 @@ $(function () {
 		// oMain.removeClass('active');
 		// oMain.eq(i).addClass('active');
 		$("#tabMainBox").animate({
-			'top': -(i*270)
+			'top': -(i*275)
 		}, 1000, 'easeOutElastic');
 		$(".tabBtn").removeClass('active');
 		that.addClass('active');

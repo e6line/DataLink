@@ -31,22 +31,23 @@ label input{
 	}
 		#topBarLeftNav{
 			float: left;
-			width: 930px;
+			width: 830px;
 			height: 34px;
 			text-align: left;
 		}
 		#topBarRightNav{
 			float: right;
-			width: 270px;
+			width: 370px;
 			height: 34px;
 			text-align: left;
 		}
 			#topBarRightNav span{
 				float: left;
 				width: 200px;
+				margin: 0 2px;
 			}
 			span#regLogin{
-				width: 70px;
+				width: 150px;
 				text-align: right;
 			}
 			span#regLogin a{
@@ -539,22 +540,28 @@ label input{
 			width: 1200px;
 			height: auto;
 		}
-		#dataBox .tabMain a:nth-child(2n+1){
+		.tabMain a:nth-child(2n+1){
 			background: #eeeeee;
 		}
-		#dataBox .tabMain a:nth-child(2n){
+		.tabMain a:nth-child(2n){
 			background: url("../images/aBoxBg.gif");
 		}
 		.tabMain a:hover{
+			background: url("../images/aBoxBgX.gif");
 		}
 		.tabMain a:hover .iconWrap{
 			padding-top: 40px;
 		}
 		.tabMain a:hover h1{
 			font-size: 20px;
+			color: #fff;
+		}
+		.tabMain a:hover p{
+			color: #fff;
 		}
 		.tabMain a:hover h3{
 			font-size: 20px;
+			color: yellow;
 		}
 
 /* page */
