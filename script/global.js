@@ -23,7 +23,6 @@ $(function () {
 	});
 
 
-
 	/* tab */
 	jQuery.jqtab = function(tabtit,tab_conbox,ev) {
 		$(tab_conbox).find("li").hide();
@@ -55,6 +54,10 @@ $(function () {
 		}
 	});
 
-	$("#mdm li").eq(setMenu).click();
+
+	// 
+	try{
+		$("#mdm li").eq(setMenu).click();
+	}catch (e) {}
 
 });
