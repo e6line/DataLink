@@ -58,8 +58,8 @@
                 <!--sidebar nav start-->
                 <ul class="nav nav-pills nav-stacked custom-nav">
                     <li><a href=""><i class="fa fa-laptop"></i> <span>基本信息与权限设置</span></a></li>
-                    <li class="active"><a href=""><i class="fa fa-book"></i> <span>网络接口与参数设置</span></a></li>
-                    <li><a href=""><i class="fa fa-cogs"></i> <span>计费方式设置</span></a></li>
+                    <li><a href=""><i class="fa fa-book"></i> <span>网络接口与参数设置</span></a></li>
+                    <li class="active"><a href=""><i class="fa fa-cogs"></i> <span>计费方式设置</span></a></li>
                 </ul>
                 <!--sidebar nav end-->
 
@@ -125,39 +125,54 @@
 
             <!-- page heading start-->
             <div class="page-heading">
-          		<h1>　发布数据</h1>
+          		<h1>　发布数据（计费设置）</h1>
             </div>
             <!-- page heading end-->
 
             <!--body wrapper start-->
             <div class="wrapper">
                 <section class="panel">
-                    <header class="panel-heading"> 发布数据（网络 / 接口与参数设置） </header>
+                    <header class="panel-heading"> 计费类型：付费 </header>
                     <div class="panel-body">
                         <form class="form-horizontal adminex-form" method="get">
                             <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label"></br></br></br>本站访问地址：</label>
+                                <label class="col-sm-2 control-label">免费试用次数：</label>
                                 <div class="col-sm-10">
-                                    <span class="help-block">数据包是，为实现某些特定调用服务，而整合在一起的相互关联的，或者共同作用的数据产品集合。如数据接口完全独立，不从属于任何数据包，此项可不填。</span></br>
-                                    <input type="text" class="form-control tooltips" data-trigger="hover" data-toggle="tooltip" title="" placeholder="http://api.51datalink.com/88888888/ 点击此处添加接口名称" data-original-title="Tooltip goes here">
+                                    <input type="text" class="form-control tooltips" data-trigger="hover" data-toggle="tooltip" title="" placeholder="不填写，默认次数为０" data-original-title="Tooltip goes here">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">目标访问地址：</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control tooltips" placeholder="输入数据源服务地址">
-                                    <font color="#737373">相关提示信息位置，提示内容位置</font>
-                                </div>    
+                                <label class="col-sm-2 control-label"></label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control tooltips" placeholder="100000">
+                                </div>
+                                <span class="col-sm-2 control-label" style="text-align:center">次／每月     =</span>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control tooltips" placeholder="7500">
+                                </div>
+                                <span class="col-sm-1 control-label" style="text-align:center">元</span>
+
+                                <span class="col-sm-1 control-label" style="padding:0">
+                                   <button class="btn btn-primary" type="button">删除</button>
+                                </span>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">HTTP方法：</label>
-                                <div class="col-sm-10">
-                                    <select class="form-control m-bot15">
-                                        <option>GET</option>
-                                        <option>POST</option>
-                                    </select>
+                                <label class="col-sm-2 control-label"></label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control tooltips" placeholder="1">
                                 </div>
+                                <span class="col-sm-2 control-label" style="text-align:center">单次使用     =</span>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control tooltips" placeholder="1">
+                                </div>
+                                <span class="col-sm-1 control-label" style="text-align:center">元</span>
+
+                                <span class="col-sm-1 control-label" style="padding:0">
+                                   <button class="btn btn-primary" type="button">删除</button>
+                                </span>
                             </div>
+
+                            <span class="help-block">注：建议根据购买次数的量级，设定阶梯价；价格创建及修改总共不能超过10次。</span>
                    　　 </form>
                     </div>
                 </section>
@@ -165,76 +180,20 @@
             
             <div class="wrapper">
                 <section class="panel">
-                    <header class="panel-heading">
-                        发布数据（接口所属数据包设置）
-                    </header>
+                    <header class="panel-heading"> 计费类型：免费 </header>
                     <div class="panel-body">
                         <form class="form-horizontal adminex-form" method="get">
                             <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label"></br></br></br>数据包标签名：</label>
-                                <div class="col-sm-10">
-                                    <span class="help-block">数据包是，为实现某些特定调用服务，而整合在一起的相互关联的，或者共同作用的数据产品集合。如数据接口完全独立，不从属于任何数据包，此项可不填。</span></br>
+                                <label class="col-sm-2 col-sm-2 control-label">调用上限：</label>
+                                <div class="col-sm-4">
                                     <input type="text" class="form-control tooltips" data-trigger="hover" data-toggle="tooltip" title="" placeholder="Hover me" data-original-title="Tooltip goes here">
                                 </div>
+                                <span class="col-sm-6 control-label" style="text-align:center">次／每天     （对每个客户所给次数，不填表示不限制调用次数）</span>
                             </div>
                    　　 </form>
                     </div>
                 </section>
             </div>
-            
-            <div class="wrapper">            
-              <section class="panel">
-                    <header class="panel-heading"> 发布数据（展示位与用户授权设置） </header>
-                    <div class="panel-body">
-                        <div class="row">
-                            
-                            <div class="col-md-6">
-                                <form class="form-horizontal bucket-form" method="get">
-                                    <div class="form-group">
-                                      <label class="col-sm-3 control-label">展示位</label>
-                                      <div class="col-sm-9 icheck minimal">
-                                            <div class="radio single-row">
-                                                <input tabindex="3" type="radio"  name="demo-radio">
-                                                <label>设置在所有页面展示</label>
-                                          </div>
-
-                                            <div class="radio single-row">
-                                                <input tabindex="3" type="radio"  name="demo-radio">
-                                                <label>产品在搜索结果中不可见</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <form class="form-horizontal bucket-form" method="get">
-                                    <div class="form-group">
-                                      <label class="col-sm-3 control-label">用户授权</label>
-                                      <div class="col-sm-9 icheck minimal">
-                                            <div class="radio single-row">
-                                                <input tabindex="3" type="radio"  name="demo-radio">
-                                                <label>仅允许企业用户调用</label>
-                                            </div>
-
-                                            <div class="radio single-row">
-                                                <input tabindex="3" type="radio"  name="demo-radio">
-                                                <label>允许实名注册用户调用</label>
-                                            </div>
-
-                                            <div class="radio checked single-row">
-                                                <input tabindex="3" type="radio"  name="demo-radio">
-                                                <label>允许所有注册用户调用</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>                            
-                            
-                        </div>
-                    </div>
-                </section>            
-            </div>            
             
             
             
