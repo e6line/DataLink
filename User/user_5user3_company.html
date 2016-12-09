@@ -145,52 +145,52 @@
 　　　　　　　　　<section class="panel">
                     <header class="panel-heading">　用户中心（企业认证）</header>
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form">
+                        <form class="form-horizontal" id="qyrzForm" role="form">
                             <div class="form-group">
-                                <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label"></label>
+                                <label class="col-lg-2 control-label"></label>
                                 <div class="col-lg-10">
                                 <p class="help-block">企业资质认证，需要您提交企业的名称和企业的对公账户，或者提交企业的营业执照扫描件，扫描件文件大小不得超过２Ｍ。对公账户验证提交后，客服会向此账户中转账一笔小额汇款，您确认收到后，将企业名称与收到的金额，邮件告知wangwentao@id5.cn。如款额一致，管理员将为您通过企业资质验证。</p>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">公司名称：</label>
+                                <label for="gsname" class="col-lg-2 control-label">公司名称：</label>
                                 <div class="col-lg-10">
-                                    <input type="password" class="form-control" id="inputPassword1" placeholder="输入公司名称">
+                                    <input type="text" class="form-control" id="gsname" name="gsname" placeholder="输入公司名称">
                                 </div>
                             </div> 
                             <div class="form-group">
-                                <label for="inputPassword1" class="col-lg-2 col-sm-2 control-label">对公账户：</label>
+                                <label for="dgzh" class="col-lg-2 control-label">对公账户：</label>
                                 <div class="col-lg-10">
-                                    <input type="password" class="form-control" id="inputPassword1" placeholder="输入公司的对公账户号">
+                                    <input type="text" class="form-control" id="dgzh" name="dgzh" placeholder="输入公司的对公账户号">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword1" class="col-lg-2 col-sm-2 control-label">公司地址：</label>
+                                <label for="gsdz" class="col-lg-2 control-label">公司地址：</label>
                                 <div class="col-lg-10">
-                                    <input type="password" class="form-control" id="inputPassword1" placeholder="输入公司的地址">
+                                    <input type="text" class="form-control" id="gsdz" name="gsdz" placeholder="输入公司的地址">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword1" class="col-lg-2 col-sm-2 control-label">邮箱地址：</label>
+                                <label for="email" class="col-lg-2 control-label">邮箱地址：</label>
                                 <div class="col-lg-10">
-                                    <input type="password" class="form-control" id="inputPassword1" placeholder="输入公司的联系邮箱">
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="输入公司的联系邮箱">
                                 </div>
                             </div>                           
                             <div class="form-group">
-                                <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label"></label>
+                                <label for="inputEmail1" class="col-lg-2 control-label"></label>
                                 <div class="col-lg-10">
                                   <p><br>
                                     ------------------------------------------------------ 可选 ------------------------------------------------------</p>
                                 </div>
                             </div>                             
                             <div class="form-group">
-                                <label for="inputPassword1" class="col-lg-2 col-sm-2 control-label">营业执照：</label>
+                                <label for="" class="col-lg-2 control-label">营业执照：</label>
                                 <div class="col-lg-10">
-                                    <input type="password" class="form-control" id="inputPassword1" placeholder="输入公司的联系邮箱">
+                                    <input type="text" class="form-control" id="" placeholder="输入公司的联系邮箱">
                                 </div>
                             </div>                             
                             <div class="form-group">
-                                <label for="exampleInputFile2" class="col-lg-2 col-sm-2 control-label">执照副本：</label>
+                                <label for="exampleInputFile2" class="col-lg-2 control-label">执照副本：</label>
                                 <div class="col-lg-10">
                                 <input type="file" id="exampleInputFile2">
                                 <p class="help-block">上传执照扫描件，图片ｊｐｇ格式，不超过２Ｍ。</p>
@@ -199,7 +199,7 @@
                             
                             <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-10"><br/>
-                                <input type="checkbox"> 我已阅读并同意《数联用户注册协议》
+                                <input id="check_agree" name="check_agree" type="checkbox"> 我已阅读并同意《数联用户注册协议》
                                 </div>
                             </div>
                             <div class="form-group">
@@ -231,6 +231,8 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/modernizr.min.js"></script>
 <script src="js/jquery.nicescroll.js"></script>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="js/validate.js" type="text/javascript"></script>
 
 
 <!--common scripts for all pages-->
