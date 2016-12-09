@@ -894,4 +894,35 @@ $(document).ready(function(){
 		}
 	});
 
+	/*发布数据*/
+	$("#fbdata").validate({
+		rules:{
+			dataname:{required:true}
+			,datatype:{required:true}
+			,datainfo:{required:true}
+			,datatag:{required:true}
+		}
+		,messages:{
+			dataname:{required:"此为必填项，请填写完善"}
+			,datatype:{required:"此为必填项，请填写完善"}
+			,datainfo:{required:"此为必填项，请填写完善"}
+			,datatag:{required:"此为必填项，请填写完善"}
+		}
+	});
+
+	$("#fbdata2").validate({
+		rules:{
+			url:{required:true,url:true}
+			,mbdz:{required:true}
+			,datainfo:{required:true}
+			,datatag:{required:true}
+		}
+		,messages:{
+			url:{required:"此为必填项，请填写完善", url:"请检查您的url格式"}
+			,mbdz:{required:"此为必填项，请填写完善"}
+			,datainfo:{required:"此为必填项，请填写完善"}
+			,datatag:{required:"此为必填项，请填写完善"}
+		}
+	});
+
 });
