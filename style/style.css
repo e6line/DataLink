@@ -2,7 +2,7 @@
 @charset "utf-8";body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;}html{color:#333;background:#fff;}body,button,input,select,textarea{font:12px tahoma,arial,"微软雅黑","","\5FAE\8F6F\96C5\9ED1";}input,select,textarea{font-size:100%;outline:0 none;}fieldset,img,a img{border:0;}iframe{display:block;}ol,ul{list-style:none;}a{color:#333;}a:hover{color:#ea6c1b;text-decoration:none;}ins,a{text-decoration:none;}em,i{font-style:normal;}.clear{clear:both;height:0;font-size:0;overflow:hidden;}.base-clear:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}.base-clear{zoom:1;}.fl{float:left;}.fr{float:right;}.dib-wrap{font-size:0;*word-spacing:-1px;}.dib-wrap .dib{font-size:12px;letter-spacing:normal;word-spacing:normal;vertical-align:top;}@media screen and (-webkit-min-device-pixel-ratio:0){.dib-wrap{letter-spacing:-5px;}}.dib{display:inline-block;*display:inline;*zoom:1;}
 
 /* site */
-a, #searchText, .btn, .btn-gray, .iconWrap, .tabMain a h1, .tabMain a h3{-webkit-transition: all 0.218s;-moz-transition: all 0.218s;-ms-transition: all 0.218s;-o-transition: all 0.218s;transition: all 0.218s;}
+a, #searchText, .btn, .btn-gray, .iconWrap, .tabMain a h1, .tabMain a h3, .myDatasBtn{-webkit-transition: all 0.218s;-moz-transition: all 0.218s;-ms-transition: all 0.218s;-o-transition: all 0.218s;transition: all 0.218s;}
 
 /* global */
 html, body{
@@ -17,6 +17,9 @@ label input{
 }
 .md-25{
 	margin-bottom: 25px;
+}
+.w-100{
+	width: 100px;
 }
 #topBar{
 	height: 34px;
@@ -1239,4 +1242,208 @@ label.error:after{
 .checkBoxWrap label.error{
 	top: -4px;
 	left: 430px;
+}
+
+/* myData */
+.myDataTabBtn{
+	border-left: 1px solid #ccc;
+}
+.myDataTabBtn a{
+	border-right: 1px solid #ccc;
+	display: inline-block;
+	padding: 10px 35px;
+	font-size: 14px;
+}
+.myDataTabBtn a.active{
+	background: #03c5ff;
+	color: #fff;
+}
+.tableList{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-collapse: collapse;
+}
+.tableList th{
+	background: #e5e5e5;
+}
+.tableList td, .tableList th{
+	border: 1px solid #ccc;
+}
+.myDataTabBox{
+	display: none;
+}
+.myDataTabBox.active{
+	display: block;
+}
+#myDataBox h3{
+	line-height: 30px;
+}
+#myDataBox h3 span{
+	color: #03c5ff;
+}
+.rd{
+	display: inline-block;
+}
+.rd span{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: -3px;
+}
+.rd span img{
+	margin-top: -15px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.numText{
+	border: 1px solid #ccc;
+	font-size: 16px;
+    width: 50px;
+    height: 30px;
+    padding: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.zf-wrap{
+	padding: 45px 0 30px;
+	margin-bottom: 35px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.sxInputWrap em{
+	font-size: 16px;
+	line-height: 50px;
+	padding-left: 20px;
+}
+.tab_btn{
+	padding-top: 25px;
+	text-align: right;
+}
+.tab_btn a{
+	display: inline-block;
+	margin-left: 20px;
+	width: 160px;
+}
+.myDatas{
+	margin-right: 30px;
+	margin-bottom: 30px;
+	position: relative;
+	width: 210px;
+	height: 135px;
+	padding: 20px;
+	background: #f7f7f7;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+.myDatas span{
+	padding-left: 20px;
+}
+.myDatas span h3{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	line-height: 30px;
+}
+.myDatas span i{
+	color: #ff6600;
+	font-size: 14px;
+	font-weight: bold;
+}
+.myDatas p{
+	padding-top: 20px;
+}
+.myDatasBtn{
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: -40px;
+	background: #666;
+	background: rgba(0,0,0,.5);
+	width: 100%;
+	height: 40px;
+}
+.myDatasBtn.active{
+	display: block;
+	bottom: 0px;
+}
+.myDatasBtn a{
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	display: inline-block;
+	width: 50%;
+}
+.select{
+   background: transparent;
+   width: 468px;
+   padding: 5px 10px;
+   font-size: 16px;
+   border: none;
+   height: 44px;
+   -webkit-appearance: none; /*for chrome*/
+}
+.select2{
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+.xl{
+	background: url("../images/xl.gif") 570px center no-repeat;
+}
+.a_dx{
+	margin-right: 20px;
+	display: inline-block;
+	padding: 10px 20px;
+	background: #eefbff;
+	color: #00a9ec;
+	border: 1px solid #ccc;
+}
+.t_table{
+	width: 100%;
+}
+.t_table th{
+	padding: 10px;
+	background: #f7f7f7;
+}
+.t_table td{
+	padding: 5px;
+}
+.t_table input{
+	font-size: 16px;
+	line-height: 20px;
+	text-indent: 1em;
+	width: 100%;
+	height: 30px;
+	border: 1px solid #ccc;
+}
+.del{
+	text-align: center;
+	display: block;
+	padding: 10px 20px;
+	background: #ccc
+}
+.t_btn{
+	padding: 5px;
+}
+.op_wrap{
+	text-align: right;
+}
+.op_wrap a{
+	float: right;
+	width: 150px;
+}
+.textarea_label{
+	font-size: 16px;
+	margin-right: 10px;
+	vertical-align: top;
+}
+.textarea{
+	font-size: 16px;
+	width: 500px;
+	padding: 10px;
 }

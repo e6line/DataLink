@@ -63,22 +63,42 @@
 <!-- /header -->	
 <!-- main -->
 <div class="mainBg">
-	<div id="main">
-		
-		<div id="dataListMenu" class="md-25">
-			<div id="dataListMenuBar">
-				<i></i>
-				<a href="#">用户实名认证</a>
+	<div id="main" style="padding-top:50px;">
+
+
+		<!-- myDataWrap -->
+		<div id="myDataWrap" class="base-clear">
+			<div id="myDataMenu" class="fl">
+				<h1><span>我的数联</span></h1>
+				<ul id="mdm">
+					<li><a href="#" class="i1">我的数据</a></li>
+					<li><a href="#" class="i2">我的订单</a></li>
+					<li><a href="#" class="i3">我的收藏</a></li>
+					<li class="dmenu">
+						<a href="#" class="i4">交易结算</a>
+						<span>
+							<a href="#">我的数据采购</a>
+							<a href="#">我的数据服务</a>
+						</span>
+						<i></i>
+					</li>
+					<li class="dmenu">
+						<a href="#" class="i5">用户中心</a>
+						<span>
+							<a href="#">密码修改</a>
+							<a href="#">实名认证</a>
+							<a href="#">企业认证</a>
+							<a href="#">发票管理</a>
+						</span>
+						<i></i>
+					</li>
+				</ul>
 			</div>
-		</div>
-		
+			<div id="myDataBox" class="fr">
+				<h1>企业认证</h1>
+				<div style="height:30px"></div>
 
-		<div id="dataBox" class="md-25">
-			<ul class="tab_conbox" id="tab_conbox">
-				<li class="tab_con base-clear">
-
-					<div id="sxFormWrap" class="fl">
-						<form action="#" id="qyrz">
+					<form action="#" id="qyrz">
 						<div class="sxWrap">
 								<div class="sxInputWrap">
 									<span>公司名称：</span>
@@ -143,15 +163,9 @@
 								<input type="submit" class="btn" value="提交认证资料">
 							</div>
 						</form>
-					</div>
-
-					<div id="sxInfo" class="fr">
-						企业资质认证，需要您提交企业的名称和企业的对公账户，或者提交企业的营业执照扫描件，扫描件文件大小不得超过２Ｍ。对公账户验证提交后，客服会向此账户中转帐一笔小额汇款，您确认收到后，将企业名称与收到的金额，邮件告知wangwentao@id5.cn。如款额一致，系统会为您通过企业资质验证。
-					</div>
-
-				</li>
-			</ul>
+			</div>
 		</div>
+		<!-- /myDataWrap -->
 
 	</div>
 </div>
@@ -164,5 +178,11 @@
 </div>
 <!-- /footer -->	
 
+<script>
+
+/*当前菜单索引 后台配置*/
+var setMenu = 4;
+	
+</script>
 </body>
 </html>

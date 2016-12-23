@@ -936,4 +936,66 @@ $(document).ready(function(){
 			,user_email:{validEmail:"请检查您的邮箱格式"}
 		}
 	});
+
+	
+	/* 实名认证 */
+	$("#rzForm").validate({
+		rules:{
+			real_name:{required:true,cn_rangelength:[2,50],validCName:true}
+			,identity_card:{required:true,validId:true}
+			,check_agree: {required:true}
+		}
+		,messages:{
+			real_name:{required:"此为必填项，请填写完善",cn_rangelength:jQuery.format("请输入姓名长度{0} 和 {1} 位的中文"),validCName:"输入内容必须为汉字"}
+			,identity_card:{required:"此为必填项，请填写完善",validId:"身份证格式不对"}
+			,check_agree: {required:"请同意服务条款"}
+		}
+	});
+
+
+
+
+	/*修改密码*/
+	$("#setPassword").validate({
+		rules:{
+			old_pwd:{required:true,cn_rangelength:[6,32],validPassword:true}
+			,user_pwd:{required:true,cn_rangelength:[6,32],validPassword:true}
+			,re_pwd:{required:true,cn_rangelength:[6,32],equalTo: "#user_pwd"}
+		}
+		,messages:{
+			old_pwd:{required:"此为必填项，请填写完善",cn_rangelength:jQuery.format("请输入密码长度{0} 和 {1} 位的字符串"),validPassword:"必须由字母和数字组成"}
+			,user_pwd:{required:"此为必填项，请填写完善",cn_rangelength:jQuery.format("请输入密码长度{0} 和 {1} 位的字符串"),validPassword:"必须由字母和数字组成"}
+			,re_pwd:{required:"此为必填项，请填写完善",cn_rangelength:"请输入密码长度{0} 和 {1} 位的字符串",equalTo:"2次输入密码不一致"}
+		}
+	});
+
+	/* 发票地址 */
+	$("#setFpAdd").validate({
+		rules:{
+			u_name:{required:true,cn_rangelength:[2,50],validCName:true}
+			,u_add:{required:true}
+			,u_tel:{required:true,validMobile:true}
+		}
+		,messages:{
+			u_name:{required:"此为必填项，请填写完善",cn_rangelength:jQuery.format("请输入密码长度{0} 和 {1} 位的字符串"),validPassword:"必须由字母和数字组成"}
+			,u_add:{required:"此为必填项，请填写完善"}
+			,u_tel:{required:"此为必填项，请填写完善",validMobile:"输入的手机号错误，请核实后重新填写"}
+		}
+	});
+
+	/* 发布 */
+	$("#base_data_form").validate({
+		rules:{
+			sj_name:{required:true}
+			,sj_type:{required:true}
+			,sj_info:{required:true}
+			,add_sjb:{required:true}
+		}
+		,messages:{
+			sj_name:{required:"此为必填项，请填写完善"}
+			,sj_type:{required:"此为必填项，请填写完善"}
+			,sj_info:{required:"此为必填项，请填写完善"}
+			,add_sjb:{required:"此为必填项，请填写完善"}
+		}
+	});
 });

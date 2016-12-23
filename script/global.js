@@ -39,10 +39,7 @@ $(function () {
 	};
 
 	$.jqtab("#tabs","#tab_conbox","click");
-	
-	// $.jqtab("#tabs2","#tab_conbox2","mouseenter");
-	
-
+		
 
 	$("#mdm li").click(function () {
 		var that = $(this);
@@ -55,9 +52,121 @@ $(function () {
 	});
 
 
-	// 
+	// myData
 	try{
 		$("#mdm li").eq(setMenu).click();
 	}catch (e) {}
 
+
+	// tab
+	$(".myDataTabBtn a").click(function () {
+		var that = $(this);
+		var i = that.index();
+		$(".myDataTabBtn a").removeClass('active');
+		that.addClass('active');
+		$(".myDataTabBox").removeClass('active');
+		$(".myDataTabBox").eq(i).addClass('active');
+	});
+
+
+	//myDatas
+	$(".myDatas").hover(function () {
+		var obj = $(this).find(".myDatasBtn");
+		obj.addClass('active');
+	}, function () {
+		var obj = $(this).find(".myDatasBtn");
+		obj.removeClass('active');
+	});
+
+	//a_dx
+	$(".a_dx").click(function () {
+		$("#add_sjb").val($(this).html());
+	});
+
+	// 初始化
+	$("#del").click(function () {
+		if($(".t_tbody").length > 1){
+			$(this).parents('.t_tbody').remove();
+			setOpt();
+		}
+	});
+
+	$("#add_btn").click(function () {
+		$("#add_table").append($(".t_tbody").eq(0).clone(true));
+		setOpt();
+	});
+
+	setOpt();
+
+	function setOpt() {
+		$(".t_tbody").each(function (index) {
+			setFn(index);
+		});
+	}
+
+	function setFn (i) {
+		$(".op_name").attr({
+			'id': 'op_name_' + i,
+			'name': 'op_name_' + i
+		});
+		$(".op_type").attr({
+			'id': 'op_requir_' + i,
+			'name': 'op_requir_' + i
+		});
+		$(".op_requir").attr({
+			'id': 'op_requir_' + i,
+			'name': 'op_requir_' + i
+		});
+		$(".op_query").attr({
+			'id': 'op_query_' + i,
+			'name': 'op_query_' + i
+		});
+		$(".op_info").attr({
+			'id': 'op_info_' + i,
+			'name': 'op_info_' + i
+		});
+		$(".op_val").attr({
+			'id': 'op_val_' + i,
+			'name': 'op_val_' + i
+		});
+	}
+
+	$("#del2").click(function () {
+		if($(".t_tbody2").length > 1){
+			$(this).parents('.t_tbody2').remove();
+			setOpt2();
+		}
+	});
+
+	$("#add_btn2").click(function () {
+		$("#add_table2").append($(".t_tbody2").eq(0).clone(true));
+		setOpt2();
+	});
+
+	setOpt2();
+
+	function setOpt2() {
+		$(".t_tbody2").each(function (index) {
+			setFn(index);
+		});
+	}
+
+	function setFn2 (i) {
+		$(".op2_name").attr({
+			'id': 'op2_name_' + i,
+			'name': 'op2_name_' + i
+		});
+		$(".op2_type").attr({
+			'id': 'op2_requir_' + i,
+			'name': 'op2_requir_' + i
+		});
+		$(".op2_info").attr({
+			'id': 'op2_info_' + i,
+			'name': 'op2_info_' + i
+		});
+		$(".op2_val").attr({
+			'id': 'op2_val_' + i,
+			'name': 'op2_val_' + i
+		});
+	}
 });

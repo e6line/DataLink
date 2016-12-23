@@ -9,6 +9,7 @@
 	<script src="script/global.js" type="text/javascript"></script>
 	<script src="script/jquery.validate.min.js" type="text/javascript"></script>
 	<script src="script/validate.js" type="text/javascript"></script>
+
 </head>
 <body>
 
@@ -62,58 +63,67 @@
 <!-- /header -->	
 <!-- main -->
 <div class="mainBg">
-	<div id="main">
-		
-		<div id="dataListMenu" class="md-25">
-			<div id="dataListMenuBar">
-				<i></i>
-				<a href="#">用户实名认证</a>
+	<div id="main" style="padding-top:50px;">
+
+
+		<!-- myDataWrap -->
+		<div id="myDataWrap" class="base-clear">
+			<div id="myDataMenu" class="fl">
+				<h1><span>我的数联</span></h1>
+				<ul id="mdm">
+					<li><a href="#" class="i1">我的数据</a></li>
+					<li><a href="#" class="i2">我的订单</a></li>
+					<li><a href="#" class="i3">我的收藏</a></li>
+					<li class="dmenu">
+						<a href="#" class="i4">交易结算</a>
+						<span>
+							<a href="#">我的数据采购</a>
+							<a href="#">我的数据服务</a>
+						</span>
+						<i></i>
+					</li>
+					<li class="dmenu">
+						<a href="#" class="i5">用户中心</a>
+						<span>
+							<a href="#">密码修改</a>
+							<a href="#">实名认证</a>
+							<a href="#">企业认证</a>
+							<a href="#">发票管理</a>
+						</span>
+						<i></i>
+					</li>
+				</ul>
+			</div>
+			<div id="myDataBox" class="fr">
+				<h1>交易结算（寄送发票地址）</h1>
+				<div style="height:30px"></div>
+					<div class="sxWrap">
+						<div class="sxInputWrap">
+							<span>收件人：</span>
+							<em>某某某</em>
+						</div>
+					</div>
+					
+					<div class="sxWrap">
+						<div class="sxInputWrap">
+							<span>收件地址：</span>
+							<em>北京市海淀区杏石口路甲１８号航天信息园１号楼西区４层</em>
+						</div>
+					</div>
+
+					<div class="sxWrap">
+						<div class="sxInputWrap">
+							<span>联系手机：</span>
+							<em>18615698752</em>
+						</div>
+					</div>
+
+					<div class="sxWrap btnWrap">
+						<input type="submit" class="btn" value="确认返回">
+					</div>
 			</div>
 		</div>
-		
-
-		<div id="dataBox" class="md-25">
-			<ul class="tab_conbox" id="tab_conbox">
-				<li class="tab_con base-clear">
-		
-					<div id="sxFormWrap" class="fl">
-						<form id="rzForm">
-							<div class="sxWrap">
-								<div class="sxInputWrap">
-									<span>姓　　名：</span>
-									<input class="sxText" name="real_name" id="real_name" type="text" placeholder="输入要查询的姓名，此项为必填">
-								</div>
-								<i>*</i>
-							</div>
-							
-							<div class="sxWrap">
-								<div class="sxInputWrap">
-									<span>身份证号：</span>
-									<input class="sxText" id="identity_card" name="identity_card" type="text" placeholder="输入您的身份证号">
-								</div>
-								<i>*</i>
-							</div>
-
-							<div class="sxWrap checkBoxWrap">
-								<label>
-									<input id="check_agree" name="check_agree" type="checkbox">
-									<span>我已阅读并同意<a href="#">《数联用户注册协议》</a></span>
-								</label>
-							</div>
-							
-							<div class="sxWrap btnWrap">
-								<input type="submit" class="btn" value="提交认证资料">
-							</div>
-						</form>
-					</div>
-
-					<div id="sxInfo" class="fr">
-						交您的姓名与身份证号，完成用户实名认证。数联网将保护您所提交的信息不被外泄，请放心注册。
-					</div>
-
-				</li>
-			</ul>
-		</div>
+		<!-- /myDataWrap -->
 
 	</div>
 </div>
@@ -126,5 +136,11 @@
 </div>
 <!-- /footer -->	
 
+<script>
+
+/*当前菜单索引 后台配置*/
+var setMenu = 3;
+	
+</script>
 </body>
 </html>
