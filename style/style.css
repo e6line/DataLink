@@ -1447,3 +1447,12 @@ label.error:after{
 	width: 500px;
 	padding: 10px;
 }
+.myDataTips{
+	margin: 50px auto;
+	width: 600px;
+}
+.myDataTips h1{
+	text-align: center;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
