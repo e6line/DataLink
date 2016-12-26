@@ -1277,6 +1277,9 @@ label.error:after{
 .myDataTabBox.active{
 	display: block;
 }
+#myDataBox{
+	position: relative;
+}
 #myDataBox h3{
 	line-height: 30px;
 }
@@ -1455,4 +1458,65 @@ label.error:after{
 	text-align: center;
 	padding-bottom: 30px;
 	margin-bottom: 30px;
+}
+.myDataTabTool{
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	height: 40px;
+}
+.myDataTabTool a, .myDataTabTool .t_s{
+	display: inline-block;
+	vertical-align: middle;
+}
+.l_b{
+	width: 30px;
+	height: 30px;
+	background: url("../images/l_b.gif") no-repeat;
+}
+.r_b{
+	width: 30px;
+	height: 30px;
+	background: url("../images/r_b.gif") no-repeat;
+}
+.t_b{
+	padding: 5px 15px;
+	font-size: 16px;
+}
+.t_b.active, .t_b:hover{
+	background: #03c5ff;
+	color: #fff;
+}
+.t_s{
+	padding: 2px;
+	vertical-align: middle;
+}
+.t_p{
+	line-height: 35px;
+	font-size: 16px;
+}
+.usercenterBtnWrap{
+	border: none!important;
+	margin-bottom: 20px;
+}
+.usercenterBtn{
+	font-size: 16px!important;
+	text-align: center;
+	line-height: 50px;
+	border: none!important;
+	width: 200px;
+	height: 60px;
+	padding: 0!important;
+	margin-right: 20px;
+	background: url("../images/c.gif") no-repeat;
+}
+.usercenterBtn.active{
+	color: #666!important;
+	background: url("../images/ca.gif") no-repeat!important;
+}
+.line{
+	height: 15px;
+	margin-bottom: 15px;
+	line-height: 0;
+	border-bottom: 1px solid #ccc;
 }
