@@ -952,7 +952,28 @@ $(document).ready(function(){
 		}
 	});
 
-
+	$("#fpwd").validate({
+		rules:{
+			user_mob:{validMobile:true,required:true}
+			,img_cord:{required:true,remote: {
+					url: domain+"/checkverifyCode.html",
+					type: "post",
+					async:　false,
+					data:{
+						img_cord:function(){
+							return $("#img_cord").val();
+						}
+					} 
+				}
+			}
+			,mob_cord:{required:true,validJsonPMob2:true}
+		}
+		,messages:{
+			user_mob:{validMobile:"输入的手机号错误，请核实后重新填写",required:"此为必填项，请填写完善"}
+			,img_cord:{required:"验证码不能为空",remote:"您输入的验证码有误"}
+			,mob_cord:{required:"此为必填项，请填写完善",validJsonPMob2:"短信验证码有误，请核实后重新填写"}
+		}
+	});
 
 
 	/*修改密码*/
