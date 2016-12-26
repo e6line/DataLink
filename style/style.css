@@ -1488,6 +1488,7 @@ label.error:after{
 	color: #fff;
 }
 .t_s{
+	width: 80px;
 	padding: 2px;
 	vertical-align: middle;
 }
