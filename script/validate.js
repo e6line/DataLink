@@ -952,6 +952,7 @@ $(document).ready(function(){
 		}
 	});
 
+	// 找回密码A
 	$("#fpwd").validate({
 		rules:{
 			user_mob:{validMobile:true,required:true}
@@ -972,6 +973,18 @@ $(document).ready(function(){
 			user_mob:{validMobile:"输入的手机号错误，请核实后重新填写",required:"此为必填项，请填写完善"}
 			,img_cord:{required:"验证码不能为空",remote:"您输入的验证码有误"}
 			,mob_cord:{required:"此为必填项，请填写完善",validJsonPMob2:"短信验证码有误，请核实后重新填写"}
+		}
+	});
+
+	//找回密码B
+	$("#password_for_phone2").validate({
+		rules:{
+			user_pwd:{required:true,cn_rangelength:[6,32],validPassword:true}
+			,re_pwd:{required:true,cn_rangelength:[6,32],equalTo: "#user_pwd"}
+		}
+		,messages:{
+			user_pwd:{required:"此为必填项，请填写完善",cn_rangelength:jQuery.format("请输入密码长度{0} 和 {1} 位的字符串"),validPassword:"必须由字母和数字组成"}
+			,re_pwd:{required:"此为必填项，请填写完善",cn_rangelength:"请输入密码长度{0} 和 {1} 位的字符串",equalTo:"2次输入密码不一致"}
 		}
 	});
 
