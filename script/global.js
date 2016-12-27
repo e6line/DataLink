@@ -78,9 +78,23 @@ $(function () {
 		obj.removeClass('active');
 	});
 
+	//初始化数组
+	var aDx = [];
+	$(".a_dx").each(function () {
+		aDx.push($(this).html());
+	});
+
+	$("#add_sjb").bind('input propertychange', function () {
+		var v = $(this).val();
+		if(aDx.indexOf(v) < 0){
+			$("#add_sjb_id").val('');
+		}
+	});
+
 	//a_dx
 	$(".a_dx").click(function () {
 		$("#add_sjb").val($(this).html());
+		$("#add_sjb_id").val($(this).attr('data-id'));
 	});
 
 	// 初始化
