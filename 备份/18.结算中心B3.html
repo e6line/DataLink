@@ -71,58 +71,59 @@
 			<div id="myDataMenu" class="fl">
 				<h1><span>我的数联</span></h1>
 				<ul id="mdm">
-					<li><a href="14.我的数据.html" class="i1">我的数据</a></li>
-					<li><a href="16.我的订单.html" class="i2">我的订单</a></li>
-					<li><a href="17.我的收藏.html" class="i3">我的收藏</a></li>
+					<li><a href="#" class="i1">我的数据</a></li>
+					<li><a href="#" class="i2">我的订单</a></li>
+					<li><a href="#" class="i3">我的收藏</a></li>
 					<li class="dmenu">
-						<a href="18.结算中心AB.html" class="i4">交易结算</a>
+						<a href="#" class="i4">交易结算</a>
 						<span>
-							<a href="18.结算中心AB.html">我的数据采购</a>
-							<a href="18.结算中心CD.html">我的数据服务</a>
+							<a href="#">我的数据采购</a>
+							<a href="#">我的数据服务</a>
 						</span>
 						<i></i>
 					</li>
 					<li class="dmenu">
-						<a href="19.用户中心.html" class="i5">用户中心</a>
+						<a href="#" class="i5">用户中心</a>
 						<span>
-							<a href="19.修改密码.html">密码修改</a>
-							<a href="19.实名认证.html">实名认证</a>
-							<a href="19.企业认证.html">企业认证</a>
+							<a href="#">密码修改</a>
+							<a href="#">实名认证</a>
+							<a href="#">企业认证</a>
+							<a href="#">发票管理</a>
 						</span>
 						<i></i>
 					</li>
 				</ul>
 			</div>
 			<div id="myDataBox" class="fr">
-				<h1>用户中心（修改密码）</h1>
+				<h1>交易结算（寄送发票地址）</h1>
 				<div style="height:30px"></div>
-				<form action="#" id="setPassword" novalidate>
+				<form action="#" id="setFpAdd" novalidate="novalidate">
 					<div class="sxWrap">
 						<div class="sxInputWrap">
-							<span>输原密码：</span>
-							<input class="sxText" name="old_pwd" id="old_pwd" type="text" placeholder="输入原始登录密码">
+							<span>收件人：</span>
+							<input class="sxText" name="u_name" id="u_name" type="text" placeholder="输入收件人">
 						</div>
 						<i>*</i>
 					</div>
 					
 					<div class="sxWrap">
 						<div class="sxInputWrap">
-							<span>输新密码：</span>
-							<input class="sxText" name="user_pwd" id="user_pwd" type="text" placeholder="密码需由6位以上，字母与数字组合而成">
+							<span>收件地址：</span>
+							<input class="sxText" name="u_add" id="u_add" type="text" placeholder="填写详细的收件地址">
 						</div>
 						<i>*</i>
 					</div>
 
 					<div class="sxWrap">
 						<div class="sxInputWrap">
-							<span>确认密码：</span>
-							<input class="sxText" name="re_pwd" id="re_pwd" type="text" placeholder="再次输入确认新密码">
+							<span>联系手机：</span>
+							<input class="sxText" name="u_tel" id="u_tel" type="text" placeholder="填写收件人联系手机">
 						</div>
 						<i>*</i>
 					</div>
 
 					<div class="sxWrap btnWrap">
-						<input type="submit" class="btn" value="保存新密码">
+						<input type="submit" class="btn" value="确认提交">
 					</div>
 				</form>
 			</div>
@@ -143,7 +144,7 @@
 <script>
 
 /*当前菜单索引 后台配置*/
-var setMenu = 4;
+var setMenu = 3;
 	
 </script>
 </body>

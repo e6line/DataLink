@@ -69,60 +69,65 @@
 		<!-- myDataWrap -->
 		<div id="myDataWrap" class="base-clear">
 			<div id="myDataMenu" class="fl">
-				<h1><span>我的数联</span></h1>
+				<h1><span>发布数据</span></h1>
 				<ul id="mdm">
-					<li><a href="14.我的数据.html" class="i1">我的数据</a></li>
-					<li><a href="16.我的订单.html" class="i2">我的订单</a></li>
-					<li><a href="17.我的收藏.html" class="i3">我的收藏</a></li>
-					<li class="dmenu">
-						<a href="18.结算中心AB.html" class="i4">交易结算</a>
-						<span>
-							<a href="18.结算中心AB.html">我的数据采购</a>
-							<a href="18.结算中心CD.html">我的数据服务</a>
-						</span>
-						<i></i>
-					</li>
-					<li class="dmenu">
-						<a href="19.用户中心.html" class="i5">用户中心</a>
-						<span>
-							<a href="19.修改密码.html">密码修改</a>
-							<a href="19.实名认证.html">实名认证</a>
-							<a href="19.企业认证.html">企业认证</a>
-						</span>
-						<i></i>
-					</li>
+					<li><a href="#" class="i3">基本信息与权限设置</a></li>
+					<li><a href="#" class="i3">网络接口与参数设置</a></li>
+					<li><a href="#" class="i3">计费方式设置</a></li>
 				</ul>
 			</div>
 			<div id="myDataBox" class="fr">
-				<h1>用户中心（修改密码）</h1>
+				<h1>计费类型：付费</h1>
 				<div style="height:30px"></div>
-				<form action="#" id="setPassword" novalidate>
-					<div class="sxWrap">
-						<div class="sxInputWrap">
-							<span>输原密码：</span>
-							<input class="sxText" name="old_pwd" id="old_pwd" type="text" placeholder="输入原始登录密码">
-						</div>
-						<i>*</i>
-					</div>
-					
-					<div class="sxWrap">
-						<div class="sxInputWrap">
-							<span>输新密码：</span>
-							<input class="sxText" name="user_pwd" id="user_pwd" type="text" placeholder="密码需由6位以上，字母与数字组合而成">
-						</div>
-						<i>*</i>
-					</div>
+				<form action="#" id="api_form">
+					<div style="height:30px"></div>
 
 					<div class="sxWrap">
 						<div class="sxInputWrap">
-							<span>确认密码：</span>
-							<input class="sxText" name="re_pwd" id="re_pwd" type="text" placeholder="再次输入确认新密码">
+							<span>免费试用次数：</span>
+							<input class="sxText" name="api_name" id="api_name" type="text" placeholder="不填写，默认次数为０">
 						</div>
-						<i>*</i>
 					</div>
+					<div class="sxWrap">
+						<label class="rd w-100"></label>
+						<label class="rd">
+							<input class="numText" id="" name="" type="text">次／每月 = 
+						</label>
+						<label class="rd">
+							<input class="numText" id="" name="" type="text">元
+						</label>
+						<label class="rd w-100"></label>
+						<label for="">
+							<a href="#">删除</a>
+						</label>
+					</div>
+					<div class="sxWrap">
+						<label class="rd w-100"></label>
+						<label class="rd">
+							<input class="numText" id="" name="" type="text">单次使用 = 
+						</label>
+						<label class="rd">
+							<input class="numText" id="" name="" type="text">元
+						</label>
+						<label class="rd w-100"></label>
+						<label for="">
+							<a href="#">删除</a>
+						</label>
+					</div>
+					<p>注：建议根据购买次数的量级，设定阶梯价；价格创建及修改总共不能超过10次。</p>
+					<div style="height:30px"></div>
+					<h1>计费类型：免费</h1>
+					<div style="height:30px"></div>
 
+					<div class="sxWrap">
+						<div class="sxInputWrap">
+							<span>调用上限：</span>
+							<input class="sxText" name="api_name" id="api_name" type="text" placeholder="不填写，默认次数为０">
+						</div>
+						<p style="padding-left: 130px">次／每天 （对每个客户所给次数，不填表示不限制调用次数）</p>
+					</div>
 					<div class="sxWrap btnWrap">
-						<input type="submit" class="btn" value="保存新密码">
+						<input type="submit" class="btn" value="保存">
 					</div>
 				</form>
 			</div>
@@ -143,7 +148,7 @@
 <script>
 
 /*当前菜单索引 后台配置*/
-var setMenu = 4;
+var setMenu = 2;
 	
 </script>
 </body>
