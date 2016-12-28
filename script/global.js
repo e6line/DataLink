@@ -121,27 +121,27 @@ $(function () {
 	function setFn (i) {
 		$(".op_name").attr({
 			'id': 'op_name_' + i,
-			'name': 'op_name_' + i
+			'name': 'op_name'
 		});
 		$(".op_type").attr({
 			'id': 'op_requir_' + i,
-			'name': 'op_requir_' + i
+			'name': 'op_requir'
 		});
 		$(".op_requir").attr({
 			'id': 'op_requir_' + i,
-			'name': 'op_requir_' + i
+			'name': 'op_requir'
 		});
 		$(".op_query").attr({
 			'id': 'op_query_' + i,
-			'name': 'op_query_' + i
+			'name': 'op_query'
 		});
 		$(".op_info").attr({
 			'id': 'op_info_' + i,
-			'name': 'op_info_' + i
+			'name': 'op_info'
 		});
 		$(".op_val").attr({
 			'id': 'op_val_' + i,
-			'name': 'op_val_' + i
+			'name': 'op_val'
 		});
 	}
 
@@ -168,19 +168,19 @@ $(function () {
 	function setFn2 (i) {
 		$(".op2_name").attr({
 			'id': 'op2_name_' + i,
-			'name': 'op2_name_' + i
+			'name': 'op2_name'
 		});
 		$(".op2_type").attr({
 			'id': 'op2_requir_' + i,
-			'name': 'op2_requir_' + i
+			'name': 'op2_requir'
 		});
 		$(".op2_info").attr({
 			'id': 'op2_info_' + i,
-			'name': 'op2_info_' + i
+			'name': 'op2_info'
 		});
 		$(".op2_val").attr({
 			'id': 'op2_val_' + i,
-			'name': 'op2_val_' + i
+			'name': 'op2_val'
 		});
 	}
 });
